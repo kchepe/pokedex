@@ -129,9 +129,7 @@ const FormComponent = (props: formProps) => {
                     }
                     {...register("hp", { required: true, valueAsNumber: true })}
                   />
-                  {errors.pName && (
-                    <p className={"errorLabel"}>required field</p>
-                  )}
+                  {errors.hp && <p className={"errorLabel"}>required field</p>}
                 </Grid>
                 <Grid item={true} xs={12}>
                   <h4>Attack:</h4>
@@ -148,7 +146,7 @@ const FormComponent = (props: formProps) => {
                       props.formType === "edit" ? pokemonID?.attack : ""
                     }
                   />
-                  {errors.pName && (
+                  {errors.attack && (
                     <p className={"errorLabel"}>required field</p>
                   )}
                 </Grid>
@@ -167,7 +165,7 @@ const FormComponent = (props: formProps) => {
                       props.formType === "edit" ? pokemonID?.defense : ""
                     }
                   />
-                  {errors.pName && (
+                  {errors.defense && (
                     <p className={"errorLabel"}>required field</p>
                   )}
                 </Grid>
